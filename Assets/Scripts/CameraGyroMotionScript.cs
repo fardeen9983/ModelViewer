@@ -21,15 +21,17 @@ public class CameraGyroMotionScript : MonoBehaviour
     {
         if (gyro != null)
         {
-            transform.localRotation = gyro.attitude * rotationLimit;
+          transform.localRotation = gyro.attitude * rotationLimit;
         }
 
-        if(Input.touchCount == 2)
+        
+        if (Input.touchCount == 2)
         {
             transform.position = CameraContainer.transform.position;
         }
     }
 
+   
     private Gyroscope EnableGyroScope()
     {
         if (SystemInfo.supportsGyroscope)
